@@ -13,10 +13,11 @@ export default NavBar
 
 
 const NavContainer = styled.nav`
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   display: flex;
   width: 100%;
-  background-color: #005d75;
+  height: fit-content;
+  background-color: #087d74;
 `

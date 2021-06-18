@@ -3,30 +3,41 @@ import styled from 'styled-components/macro'
 
 import img from '../assets/graphic.jpg'
 
-const Card = ({ id, image, name, surName, email, telephone }) => {
+const Card = ({
+  image,
+  name,
+  surName,
+  email,
+  telephone
+  }) => {
 
   return (
-    <>
-      <CardContainer style={{backgroundImage: `url(${img})`}} alt='Graphical pink and blue pattern.'>
+      <CardContainer
+        style={{backgroundImage: `url(${img})`}}
+        alt='Graphical pink and blue pattern.'
+      >
         <ImageContainer
-          style={{backgroundImage: `url(${image})`}} alt={name + ' ' + surName}
+          style={{backgroundImage: `url(${image})`}}
+          alt={name + ' ' + surName}
         />
         <Content>
           <Name>
             {name} {surName}
           </Name>
           <Contacts>
+          <Icon className='far fa-envelope'>
+          </Icon>
             <MailLink href={`mailto:${email}`}>
               {email}
             </MailLink>
           </Contacts>
           <Contacts>
-            
+            <Icon className='fas fa-phone'>
+            </Icon>
             {telephone}
           </Contacts>
         </Content>
       </CardContainer>
-    </>
   )
 }
 
@@ -41,9 +52,7 @@ const CardContainer = styled.div`
   padding: 10px;
   border: solid black 1px;
   border-radius: 10px;
-    @media (min-width: 1025px) {
-      width: 500px;
-    }
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 `
 const ImageContainer = styled.div`
   width: 200px;
@@ -56,11 +65,21 @@ const Content = styled.div`
   background-color: #fff;
   border: solid black 1px;
   border-radius: 0 0 10px 10px;
+  padding-bottom: 10px;
 `
 const Name = styled.h3`
-
-font-size: 20px;
+  font-size: 20px;
+  padding: 10px 5px;
 `
-const Contacts = styled.h4``
+const Contacts = styled.p`
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  padding: 2.5px 5px;
+`
+const Icon = styled.i`
+  margin-right: 10px;
+`
 const MailLink = styled.a`
+  font-family: 'Arial', sans-serif;
 `
+
