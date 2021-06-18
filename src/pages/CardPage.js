@@ -3,8 +3,9 @@ import styled from 'styled-components/macro'
 
 import NavBar from '../components/NavBar'
 import NavBarLink from '../components/NavBarLink'
+import CardList from '../components/CardList'
 
-const FrontPage = () => {
+const CardPage = () => {
 
   return (
     <Main>
@@ -14,28 +15,20 @@ const FrontPage = () => {
         </Icon>
           Hem
         </NavBarLink>
-        <NavBarLink page='/cards'>
-        <Icon className="far fa-address-card">
-        </Icon>
-          Kontakt
-        </NavBarLink>
-        <NavBarLink page='#'>
-        <Icon className="fas fa-info" >
-        </Icon>
-          Info
-        </NavBarLink>
       </NavBar>
+      <CardList />
     </Main>
   )
 }
 
-export default FrontPage
+export default CardPage
 
 const Main = styled.main`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding: 60px 0;
 `
 const Icon = styled.i`
    padding-right: 10px;

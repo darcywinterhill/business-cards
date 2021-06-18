@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector, batch } from 'react-redux'
-import styled from 'styled-components/macro'
 
 import { API } from '../reusables/urls'
 
@@ -25,7 +24,7 @@ const CardList = () => {
         batch(() => {
           dispatch(cards.actions.setCards(data));
           dispatch(cards.actions.setErrors(null));
-          console.log(data)
+          console.log()
         })
     })
     .catch((error) => dispatch(cards.actions.setErrors(error.message)))

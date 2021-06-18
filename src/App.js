@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 
 import FrontPage from './pages/FrontPage'
-import DetailPage from './pages/DetailPage'
+import CardPage from './pages/CardPage'
 
 import cards from './reducers/cards'
 
@@ -20,7 +20,7 @@ export const App = () => {
       <Provider store={store}>
         <Switch>
           <Route path='/' exact component={FrontPage}/>
-          <Route path='/card/:id' component={DetailPage}/>
+          <Route path='/cards' component={CardPage}/>
         </Switch>
       </Provider>
     </BrowserRouter>
