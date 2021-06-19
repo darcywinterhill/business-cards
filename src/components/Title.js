@@ -11,12 +11,12 @@ const Title = ({ text }) => {
 
 export default Title
 
-const PageTitle = styled.h2`
+const PageTitle = styled.h1`
   font-size: 25px;
   padding: 25px;
   text-transform: uppercase;
     @media (min-width: 768px) {
       font-size: 30px;
-      padding-bottom: 50px;
+      padding: 50px 0;
     }
 `

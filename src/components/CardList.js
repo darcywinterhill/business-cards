@@ -26,9 +26,9 @@ const CardList = () => {
           dispatch(cards.actions.setCards(data))
           dispatch(cards.actions.setErrors(null))
         })
-    })
-    .catch((error) => dispatch(cards.actions.setErrors(error.message)))
-  }
+      })
+      .catch((error) => dispatch(cards.actions.setErrors(error.message)))
+    }
   }
 
   return (

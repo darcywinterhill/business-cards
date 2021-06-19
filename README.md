@@ -1,19 +1,24 @@
-# Technigo React Starter App
+# Business Cards
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+A project to build a frontend for business cards retrieved from an API. The site is responsive and has passed the WAVE accessibility evaluation tool.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## Dependencies
 
-## Usage
+* NodeJS
+* react
+* react-redux
+* @reduxjs/toolkit
+* react-router-dom
+* styled-components
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## To open project
 
-Alternatively, if you don't want a new git repo on your account;
+* Copy `https://github.com/darcywinterhill/business-cards.git`
+* Add to your computer with `git clone` + the link
+* `npm install` to install dependencies
+* `npm start` to open project
+* Open `localhost:3000`
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## Live
+
+https://friendly-hodgkin-8cbde1.netlify.app/
