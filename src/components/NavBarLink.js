@@ -19,10 +19,10 @@ const NavBarLink = ({
 export default NavBarLink
 
 const NavBarLinkContainer = styled.div`
-  height: 100%;
-  width: 33.3%;
   display: flex;
   justify-content: center;
+  height: 100%;
+  width: 33.3%;
     @media (min-width: 768px) {
       width: fit-content;
     }

@@ -12,32 +12,32 @@ const Card = ({
   }) => {
 
   return (
-      <CardContainer
-        style={{backgroundImage: `url(${img})`}}
-        alt='Graphical pink and blue pattern.'
-      >
-        <ImageContainer
-          style={{backgroundImage: `url(${image})`}}
-          alt={name + ' ' + surName}
-        />
-        <Content>
-          <Name>
-            {name} {surName}
-          </Name>
-          <Contacts>
-          <Icon className='far fa-envelope'>
+    <CardContainer
+      style={{backgroundImage: `url(${img})`}}
+      alt='Graphical pink and blue pattern.'
+    >
+      <ImageContainer
+        style={{backgroundImage: `url(${image})`}}
+        alt={name + ' ' + surName}
+      />
+      <Content>
+        <Name>
+          {name} {surName}
+        </Name>
+        <Contacts>
+        <Icon className='far fa-envelope'>
+        </Icon>
+          <MailLink href={`mailto:${email}`}>
+            {email}
+          </MailLink>
+        </Contacts>
+        <Contacts>
+          <Icon className='fas fa-phone'>
           </Icon>
-            <MailLink href={`mailto:${email}`}>
-              {email}
-            </MailLink>
-          </Contacts>
-          <Contacts>
-            <Icon className='fas fa-phone'>
-            </Icon>
-            {telephone}
-          </Contacts>
-        </Content>
-      </CardContainer>
+          {telephone}
+        </Contacts>
+      </Content>
+    </CardContainer>
   )
 }
 
@@ -53,6 +53,15 @@ const CardContainer = styled.div`
   border: solid black 1px;
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: transform .5s ease;
+    @media (min-width: 768px) {
+      margin: 40px;
+    }
+    @media (min-width: 1025px) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
 `
 const ImageContainer = styled.div`
   width: 200px;

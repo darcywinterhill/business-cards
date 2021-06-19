@@ -48,6 +48,6 @@ export default CardList
 const CardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 0 25px 25px 25px;
 `

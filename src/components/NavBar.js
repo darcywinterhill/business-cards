@@ -1,16 +1,31 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-const NavBar = ({ children }) => {
+import NavBarLink from 'components/NavBarLink'
+
+const NavBar = () => {
   return (
     <NavContainer>
-      {children}
+      <NavBarLink page='/'>
+      <Icon className='fas fa-home'>
+      </Icon>
+        Hem
+      </NavBarLink>
+      <NavBarLink page='/cards'>
+      <Icon className='far fa-address-card'>
+      </Icon>
+        Kontakt
+      </NavBarLink>
+      <NavBarLink page='/info'>
+      <Icon className='fas fa-info'>
+      </Icon>
+        Info
+      </NavBarLink>
     </NavContainer>
   )
 }
 
 export default NavBar
-
 
 const NavContainer = styled.nav`
   position: sticky;
@@ -20,4 +35,7 @@ const NavContainer = styled.nav`
   width: 100%;
   height: fit-content;
   background-color: #087d74;
+`
+const Icon = styled.i`
+  padding-right: 10px;
 `

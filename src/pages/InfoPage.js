@@ -2,30 +2,13 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import NavBar from '../components/NavBar'
-import NavBarLink from '../components/NavBarLink'
 import Title from '../components/Title'
 
 const InfoPage = () => {
 
   return (
     <Main>
-      <NavBar>
-        <NavBarLink page='/'>
-        <Icon className='fas fa-home'>
-        </Icon>
-          Hem
-        </NavBarLink>
-        <NavBarLink page='/cards'>
-        <Icon className='far fa-address-card'>
-        </Icon>
-          Kontakt
-        </NavBarLink>
-        <NavBarLink page='/info'>
-        <Icon className='fas fa-info'>
-        </Icon>
-          Info
-        </NavBarLink>
-      </NavBar>
+      <NavBar />
       <ContentContainer>
         <Title text='Info' />
         <InfoText>
@@ -49,9 +32,6 @@ const Main = styled.main`
   min-height: 100vh;
   background-color: #e7efee;
 `
-const Icon = styled.i`
-  padding-right: 10px;
-`
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -60,9 +40,9 @@ const ContentContainer = styled.div`
 `
 const InfoText = styled.p`
   font-family: 'Arial', sans-serif;
+  font-size: 16px;
   margin-bottom: 20px;
   width: 80vw;
-  font-size: 16px;
     @media (min-width: 768px) {
       width: 70vw;
     }
